@@ -124,7 +124,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = "/image/download/"
 MEDIA_ROOT = BASE_DIR
 
-# Django Storages
+# Django Storages activar para el heroku
 
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
 DROPBOX_OAUTH2_TOKEN = 'ojx-mbnpy-cAAAAAAAAAAapyG0RVL1BtQG_ZPlGXtNATPUOrnnUyQZrVLAIrkwNT'
@@ -132,3 +132,4 @@ DROPBOX_OAUTH2_TOKEN = 'ojx-mbnpy-cAAAAAAAAAAapyG0RVL1BtQG_ZPlGXtNATPUOrnnUyQZrV
 # Django Heroku
 import django_heroku
 django_heroku.settings(locals())
+
