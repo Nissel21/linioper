@@ -6,6 +6,8 @@ from django.views import View
 
 from store.models.product import Product
 from store.models.orders import Order
+from django.contrib import messages
+
 
 
 class CheckOut(View):
@@ -27,5 +29,5 @@ class CheckOut(View):
                           quantity=cart.get(str(product.id)))
             order.save()
         request.session['cart'] = {}
-
+        messages.success(request, '¡GRACIAS POR TU COMPRA! UN REPARTIDOR HA SIDO ASIGNADO A TU PEDIDO.')
         return redirect('cart')
